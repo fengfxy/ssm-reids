@@ -12,13 +12,11 @@ public class RoomUserDaoImp implements RoomUserDao {
 
 	@Override
 	public int insert(RoomUser roomUser) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public int insertSelective(RoomUser roomUser) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
