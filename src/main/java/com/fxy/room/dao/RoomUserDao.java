@@ -34,7 +34,7 @@ public interface RoomUserDao {
     /**
      *  动态字段,根据主键来更新符合条件的数据库记录:room_user
      *
-     * @param record
+     * @param roomUser
      */
-    int updateByPrimaryKeySelective(RoomUser record);
+    int updateByPrimaryKeySelective(RoomUser roomUser);
 }

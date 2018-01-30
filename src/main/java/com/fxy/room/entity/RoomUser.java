@@ -1,5 +1,6 @@
 ﻿package com.fxy.room.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Date;
  * @Author feng
  * @Date 2018-01-29 20:02:08
  */
-public class RoomUser {
+public class RoomUser implements Serializable{
     /**
      * @Fields id 主键
      */
@@ -100,4 +101,10 @@ public class RoomUser {
     public void setLastTime(Date lastTime) {
         this.lastTime = lastTime;
     }
+
+	@Override
+	public String toString() {
+		return "RoomUser [id=" + id + ", name=" + name + ", creatTime=" + creatTime + ", lastTime=" + lastTime + "]";
+	}
+    
 }
