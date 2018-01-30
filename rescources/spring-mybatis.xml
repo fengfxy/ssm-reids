@@ -66,7 +66,7 @@
 	<!-- p:mapperLocations自动扫描model目录中的映射xml文件，省去了在config中手工配置 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
 		p:dataSource-ref="dataSource" 
-		p:configLocation="classpath:mybatis.xml"
+		p:configLocation="classpath:myBatis.xml"
 		p:mapperLocations="classpath:com/fxy/room/dao/mapping/*.xml" /><!-- configLocation为mybatis属性
 		mapperLocations为所有mapper -->
 

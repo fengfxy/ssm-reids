@@ -17,12 +17,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.fxy.room.entity.RoomUser;
 import com.fxy.room.service.UserService;
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:spring-source.xml")
 public class UserServiceImpTest {
 
 	@Resource
 	private UserService userService;
+	
+	@Before
+	public void before() {
+		@SuppressWarnings("resource")
+		ApplicationContext context = new ClassPathXmlApplicationContext(
+				new String[] { "classpath:spring-source.xml"});
+		userService = (UserService) context.getBean("userService");
+		//不用@Resource，而用@Autowired时,也可采用下面这种getBean方式
+//		userService = (UserService) context.getBean("userServiceImpl");
+	}
 	
 	@Test
 	public void testRemove() {
