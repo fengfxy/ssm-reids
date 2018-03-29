@@ -1,4 +1,9 @@
-﻿package com.fxy.room.entity;
+﻿/*
+* RoomUser.java
+* Copyright(C) 2017-2020 fendo公司
+* @date 2018-02-05
+*/
+package com.fxy.room.entity;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -6,11 +11,16 @@ import java.util.Date;
 /**
  * @Description room_user表的实体类
  * @version 1.0
- * @Author feng
- * @Date 2018-01-29 20:02:08
+ * @Author fendo
+ * @Date 2018-02-05 21:28:08
  */
 public class RoomUser implements Serializable{
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * @Fields id 主键
      */
     private Integer id;
@@ -19,6 +29,11 @@ public class RoomUser implements Serializable{
      * @Fields name 用户昵称
      */
     private String name;
+
+    /**
+     * @Fields userPhoto 用户头像
+     */
+    private String userPhoto;
 
     /**
      * @Fields creatTime 创建时间
@@ -67,6 +82,24 @@ public class RoomUser implements Serializable{
     }
 
     /**
+     * 获取 用户头像 字段:room_user.user_photo
+     *
+     * @return room_user.user_photo, 用户头像
+     */
+    public String getUserPhoto() {
+        return userPhoto;
+    }
+
+    /**
+     * 设置 用户头像 字段:room_user.user_photo
+     *
+     * @param userPhoto the value for room_user.user_photo, 用户头像
+     */
+    public void setUserPhoto(String userPhoto) {
+        this.userPhoto = userPhoto == null ? null : userPhoto.trim();
+    }
+
+    /**
      * 获取 创建时间 字段:room_user.creat_time
      *
      * @return room_user.creat_time, 创建时间
@@ -101,10 +134,4 @@ public class RoomUser implements Serializable{
     public void setLastTime(Date lastTime) {
         this.lastTime = lastTime;
     }
-
-	@Override
-	public String toString() {
-		return "RoomUser [id=" + id + ", name=" + name + ", creatTime=" + creatTime + ", lastTime=" + lastTime + "]";
-	}
-    
 }

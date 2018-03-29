@@ -22,7 +22,7 @@ public interface UserService {
      *
      * @param id
      */
-    RoomUser findByID(Integer id);
+    RoomUser findById(Integer id);
 
     /**
      *  根据主键来更新符合条件的数据库记录:room_user
