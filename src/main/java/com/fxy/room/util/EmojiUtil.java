@@ -1,6 +1,5 @@
 package com.fxy.room.util;
 
-
 import com.github.binarywang.java.emoji.EmojiConverter;
 
 public class EmojiUtil {
